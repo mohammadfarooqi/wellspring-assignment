@@ -27,19 +27,6 @@ export function getRecentPatients(patients, currentDate, numberOfDays) {
   return recentPatients;
 }
 
-export function getMaxCheckInDate(patients) {
-  if (patients.length === 0) {
-    return null; // Return null if the array is empty
-  }
-
-  const maxDate = patients.reduce((max, patient) => {
-    const lastCheckInDate = new Date(patient.lastCheckIn);
-    return lastCheckInDate > max ? lastCheckInDate : max;
-  }, new Date(patients[0].lastCheckIn));
-
-  return maxDate;
-}
-
 export function groupAppointmentsByDate(appointments) {
   const today = new Date();
   const tomorrow = new Date(today);

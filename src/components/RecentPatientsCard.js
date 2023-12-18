@@ -3,7 +3,7 @@ import { Card, CardHeader, CardTitle } from './ui/Card';
 import { Link } from 'react-router-dom';
 import PatientInfo from './PatientInfo';
 import { patients as PatientsApi } from '../services';
-import { getRecentPatients, getMaxCheckInDate } from '../lib/utils';
+import { getRecentPatients } from '../lib/utils';
 
 function RecentPatientsCard() {
   const [patients, setPatients] = useState([]);
@@ -18,7 +18,7 @@ function RecentPatientsCard() {
         (a, b) => new Date(b.lastCheckIn) - new Date(a.lastCheckIn)
       );
 
-      const currentDate = getMaxCheckInDate(data);
+      const currentDate = new Date(data?.[0]?.lastCheckIn);
       const result = getRecentPatients(data, currentDate, 7);
 
       setPatients(result);
