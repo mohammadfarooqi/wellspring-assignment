@@ -32,7 +32,7 @@ function AppointmentInfo({ appointment }) {
           {appointmentType}
         </div>
       </div>
-      <div className="bg-grey-50 rounded-r-2xl py-[21px] pl-[22px] ml-0 flex-1 w-[324px]">
+      <div className="bg-grey-50 rounded-r-2xl py-[21px] pl-[22px] ml-0 flex-1">
         <div className="text-grey-700 font-bold text-sm mb-0">
           {appointmentName}: {patientName}
         </div>
