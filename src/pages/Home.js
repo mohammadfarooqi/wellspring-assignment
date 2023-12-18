@@ -7,7 +7,7 @@ function Home() {
       <h1 className="text-3xl font-bold text-grey-600">
         Good afternoon, Meredith!
       </h1>
-      <div className="mt-11 flex space-x-10">
+      <div className="mt-11 grid grid-cols-2 max-w-4xl gap-10">
         <RecentPatientsCard />
         <UpcomingVisits />
       </div>
